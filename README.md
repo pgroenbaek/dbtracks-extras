@@ -74,12 +74,18 @@ shapes_processed_path = C:/path/to/output/folder
 
 ### Run the scripts
 
-Now you can run each `.py` script to generate the modified shapes from the project root directory.
+Now you can run each `.py` script to generate the modified shapes. Run the commands from the project root directory.
 
 For example:
 
 ```bash
 python ./scripts/somefolder/somescript.py
+```
+
+You can also run all scripts:
+
+```bash
+python ./scripts/run_all.py
 ```
 
 ## Contributing
