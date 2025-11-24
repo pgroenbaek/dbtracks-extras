@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Contributions of any size are welcome. These could be suggestions, issues, bug fixes, documentation updates, or new features.
+Contributions of any size are welcome. These could be suggestions, issues, bug fixes, documentation updates, or new scripts.
 
 Please follow the guidelines below to make the contribution process as smooth as possible.
 
@@ -24,14 +24,14 @@ Please follow the guidelines below to make the contribution process as smooth as
 7. Follow conventional commits naming for the final squash merge into `master`:
    - Format: `<type>: <description>`
    - Types used:
-     - `feat:` a new feature
+     - `script:` a new script
      - `fix:` a bug fix
      - `docs:` documentation only changes
      - `style:` formatting, whitespace, etc.
      - `refactor:` code changes that are not features or fixes
      - `test:` adding or fixing tests
      - `chore:` maintenance, build scripts, etc.
-   - Example: `feat: add new feature`
+   - Example: `script: add cool new script`
 
 
 ## Code of conduct
