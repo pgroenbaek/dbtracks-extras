@@ -27,14 +27,40 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 Download all shapes from [the-train.de](https://the-train.de/downloads/entry-download/11252-dbtracks) and extract all the sub-zipfiles into a single folder.
 
 Create a virtual env:
-```python
-
+```bash
+python3 -m venv dbtracks-extras
 ```
 
-Configure the `.ini` file with the appropriate paths to `ffeditc_unicode.exe`, the folder with shapes, and to the output-folder.
+Activate the virtual env:
+- Linux / macOS: `source dbtracks-extras/bin/activate`
+- Windows (powershell): `dbtracks-extras\Scripts\Activate.ps1`
+- Windows (cmd): `dbtracks-extras\Scripts\activate.bat`
 
-Now you can run each `.py` script to generate the modified shapes.
+Install the dependencies using `pip`:
 
+```bash
+pip install -r requirements.txt
+```
+
+Configure the `scripts/config.ini` file with the appropriate paths to `ffeditc_unicode.exe`, the folder with shapes, and to the output-folder.
+
+For example:
+```ini
+[utilities]
+ffeditc_path = C:/path/to/ffeditc_unicode.exe
+
+[shapes]
+shapes_load_path = C:/path/to/input/folder
+shapes_processed_path = C:/path/to/input/folder
+```
+
+Now you can run each `.py` script to generate the modified shapes from the project root directory.
+
+For example:
+
+```bash
+python ./scripts/somefolder/somescript.py
+```
 
 ## Contributing
 
