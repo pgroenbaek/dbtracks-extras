@@ -38,7 +38,7 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 
 Download all shapes from [the-train.de](https://the-train.de/downloads/entry-download/11252-dbtracks) and extract all the sub-zipfiles into a single folder.
 
-### Create a virtual env
+### Set up a virtual env
 
 Create a virtual env:
 ```bash
@@ -50,7 +50,7 @@ Activate the virtual env:
 - Windows (powershell): `dbtracks-extras\Scripts\Activate.ps1`
 - Windows (cmd): `dbtracks-extras\Scripts\activate.bat`
 
-### Install dependencies with pip
+### Install dependencies
 
 Install the dependencies using `pip`:
 
@@ -72,7 +72,7 @@ shapes_load_path = C:/path/to/input/folder
 shapes_processed_path = C:/path/to/output/folder
 ```
 
-### Running the scripts
+### Run the scripts
 
 Now you can run each `.py` script to generate the modified shapes from the project root directory.
 
