@@ -1,14 +1,23 @@
 import re
 import os
+import configparser
 import pyffeditc
 import shapeio
 import trackshapeutils as tsu
+from pathlib import Path
 from shapeedit import ShapeEditor
 
 if __name__ == "__main__":
-    ffeditc_path = "./ffeditc_unicode.exe"
-    load_path = "./examples/data/"
-    processed_path = "./examples/data/processed/V4hs1t_RKL"
+    config = configparser.ConfigParser()
+    config.read("scripts/config.ini")
+
+    ffeditc_path = Path(config["utilities"]["ffeditc_path"])
+    input_path = Path(config["shapes"]["input_path"])
+    output_path = Path(config["shapes"]["output_path"])
+
+    load_path = input_path
+    processed_path = output_path / "V4hs1t_RKL"
+
     match_files = ["DB1z_a1t*.s"]
     ignore_files = ["*Tun*", "*Pnt*", "*Frog*"]
     

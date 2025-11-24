@@ -1,13 +1,22 @@
 import os
+import configparser
 import pyffeditc
 import shapeio
+from pathlib import Path
 from shapeedit import ShapeEditor
 from shapeedit.math import coordinates
 
 if __name__ == "__main__":
-    ffeditc_path = "./ffeditc_unicode.exe"
-    load_path = "./examples/data"
-    processed_path = "./examples/data/processed/OhwXOver7_5d"
+    config = configparser.ConfigParser()
+    config.read("scripts/config.ini")
+
+    ffeditc_path = Path(config["utilities"]["ffeditc_path"])
+    input_path = Path(config["shapes"]["input_path"])
+    output_path = Path(config["shapes"]["output_path"])
+
+    load_path = input_path
+    processed_path = output_path / "OhwXOver7_5d"
+
     cwire_shape = "DB22f_A1tDblSlip7_5d.s"
     match_files = ["DB1_A1tXOver7_5d.s", "DB2_A1tXOver7_5d.s", "DB3_A1tXOver7_5d.s"]
     ignore_files = ["*.sd"]

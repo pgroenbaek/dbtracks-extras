@@ -10,6 +10,8 @@ There are lots of extra custom track sections and shapes available in this packa
 - XOver7_5d with overhead wire
 - Overhead wires without track
 - Tunnels without LZB cable
+- Tunnels without gantry
+- Standalone tunnel gantries
 - Short tunnels (0.625d, 1.25d, 2.5d)
 - Half Tunnels
 - Half Embankments
@@ -22,9 +24,21 @@ There are lots of extra custom track sections and shapes available in this packa
 
 For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 
-## Running the scripts
+<!-- Available for download here: [someplace]() -->
+
+## Getting started
+
+### Prerequisites
+
+- Python3
+- All DBTracks shapes by Norbert
+- Utility programs:
+    - AceIt
+    - ffeditc_unicode.exe ()
 
 Download all shapes from [the-train.de](https://the-train.de/downloads/entry-download/11252-dbtracks) and extract all the sub-zipfiles into a single folder.
+
+### Create a virtual env
 
 Create a virtual env:
 ```bash
@@ -36,11 +50,15 @@ Activate the virtual env:
 - Windows (powershell): `dbtracks-extras\Scripts\Activate.ps1`
 - Windows (cmd): `dbtracks-extras\Scripts\activate.bat`
 
+### Install dependencies with pip
+
 Install the dependencies using `pip`:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+### Configure paths
 
 Configure the `scripts/config.ini` file with the appropriate paths to `ffeditc_unicode.exe`, the folder with shapes, and to the output-folder.
 
@@ -51,8 +69,10 @@ ffeditc_path = C:/path/to/ffeditc_unicode.exe
 
 [shapes]
 shapes_load_path = C:/path/to/input/folder
-shapes_processed_path = C:/path/to/input/folder
+shapes_processed_path = C:/path/to/output/folder
 ```
+
+### Running the scripts
 
 Now you can run each `.py` script to generate the modified shapes from the project root directory.
 

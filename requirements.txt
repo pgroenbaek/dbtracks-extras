@@ -2,3 +2,4 @@ shapeio==0.5.0b0
 shapeedit==0.5.0b0
 trackshapeutils==0.5.0b0
 pyffeditc==0.1.0
+Pillow==10.4.0

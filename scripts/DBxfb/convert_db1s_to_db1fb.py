@@ -1,14 +1,23 @@
 import os
 import re
+import configparser
 import pyffeditc
 import shapeio
+from pathlib import Path
 from shapeio.shape import Point, UVPoint, Vector
 from shapeedit import ShapeEditor
 
 if __name__ == "__main__":
-    ffeditc_path = "./ffeditc_unicode.exe"
-    load_path = "./examples/data"
-    processed_path = "./examples/data/processed/DB1fb"
+    config = configparser.ConfigParser()
+    config.read("scripts/config.ini")
+
+    ffeditc_path = Path(config["utilities"]["ffeditc_path"])
+    input_path = Path(config["shapes"]["input_path"])
+    output_path = Path(config["shapes"]["output_path"])
+
+    load_path = input_path
+    processed_path = output_path / "DB1fb"
+
     match_files = ["DB1s_*.s"]
     ignore_files = ["*Tun*", "*Pnt*", "*Frog*"]
     
