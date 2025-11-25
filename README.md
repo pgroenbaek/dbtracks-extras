@@ -24,29 +24,36 @@ There are lots of extra custom track sections and shapes available in this packa
 
 For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 
-<!-- Available for download here: [someplace]() -->
-
-## Creating the modified shapes
+## Generating the modified shapes
 
 ### Prerequisites
 
 - Python3
-- All DBTracks shapes by Norbert
+- All DBTracks packages from [the-train.de](https://the-train.de/downloads/entry-download/11252-dbtracks):
+    - BAB_DS1.zip
+    - DB_Textures.zip
+    - DB1.zip
+    - DB2.zip
+    - DB3.zip
+    - DB4.zip
+    - DB5.zip
+    - NR_Zubehoer.zip
 - Utility programs:
     - [ACE2BMP](https://www.trainsim.com/forums/filelib/search-fileid?fid=89768)
     - [AceIt](https://www.trainsim.com/forums/filelib-search-fileid?fid=67904)
-    - ffeditc_unicode.exe (found in MSTS installations)
+    - ffeditc_unicode.exe (found in the utils folder of an MSTS installation)
 
 Download all shapes from [the-train.de](https://the-train.de/downloads/entry-download/11252-dbtracks) and extract all the sub-zipfiles into a single folder.
 
 ### Set up a virtual env
 
-Create a virtual env:
+Create a virtual env. You only need to do this once.
+
 ```bash
 python3 -m venv dbtracks-extras
 ```
 
-Activate the virtual env:
+To activate the virtual env:
 - Linux / macOS: `source dbtracks-extras/bin/activate`
 - Windows (powershell): `dbtracks-extras\Scripts\Activate.ps1`
 - Windows (cmd): `dbtracks-extras\Scripts\activate.bat`
@@ -92,7 +99,7 @@ output_path = C:/path/to/output/folder/Textures
 
 ### Run the zip extraction script
 
-Now extract the DBTracks packages to the input paths using the `extract_zips.py` script:
+Now extract the DBTracks zip-file packages to the input paths using the `extract_zips.py` script:
 
 ```bash
 python ./scripts/extract_zips.py
@@ -125,4 +132,5 @@ For more details see the [contribution guidelines](/CONTRIBUTING.md).
 
 The scripts are licensed under [GNU GPL v3](/LICENSE).
 
-All shapes and textures referenced in the scripts are the original work of Norbert Rieger all rights to those belong to him.
+All shapes and textures referenced in the scripts are the original work of Norbert Rieger, and all rights to them belong to him.
+
