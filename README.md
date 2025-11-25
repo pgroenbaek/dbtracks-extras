@@ -43,8 +43,6 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
     - [AceIt](https://www.trainsim.com/forums/filelib-search-fileid?fid=67904)
     - ffeditc_unicode.exe (found in the utils folder of an MSTS installation)
 
-Download all shapes from [the-train.de](https://the-train.de/downloads/entry-download/11252-dbtracks) and extract all the sub-zipfiles into a single folder.
-
 ### Set up a virtual env
 
 Create a virtual env. You only need to do this once.
@@ -68,7 +66,7 @@ pip install -r requirements.txt
 
 ### Configure paths
 
-Configure the `scripts/config.ini` file with the appropriate paths to `ffeditc_unicode.exe`, the folder with shapes, and to the output-folder.
+Configure the `scripts/config.ini` file with the appropriate paths to the utility programs, the DBTracks zip-file packages, and to the input/output-folder.
 
 For example:
 ```ini
