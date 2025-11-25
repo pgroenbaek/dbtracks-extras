@@ -107,11 +107,13 @@ output_path = C:/path/to/output/folder/Textures
 
 ### Run the zip extraction script
 
-Now extract the DBTracks zip-file packages to the input paths using the `extract_zips.py` script:
+Now extract the DBTracks zip-file packages using the `extract_zips.py` script:
 
 ```bash
 python ./scripts/extract_zips.py
 ```
+
+This will take all `.s`, `.sd` and `.ace` files from the DBTracks zip-files and put them into the input folders. Those zip-files contain nested rar-files each with subfolders, so it's easier to extract them all through scripting than by hand.
 
 ### Run the scripts
 
