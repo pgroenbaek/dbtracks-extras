@@ -26,15 +26,16 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 
 <!-- Available for download here: [someplace]() -->
 
-## Getting started
+## Creating the modified shapes
 
 ### Prerequisites
 
 - Python3
 - All DBTracks shapes by Norbert
 - Utility programs:
-    - AceIt
-    - ffeditc_unicode.exe ()
+    - [ACE2BMP](https://www.trainsim.com/forums/filelib/search-fileid?fid=89768)
+    - [AceIt](https://www.trainsim.com/forums/filelib-search-fileid?fid=67904)
+    - ffeditc_unicode.exe (found in MSTS installations)
 
 Download all shapes from [the-train.de](https://the-train.de/downloads/entry-download/11252-dbtracks) and extract all the sub-zipfiles into a single folder.
 
@@ -66,10 +67,35 @@ For example:
 ```ini
 [utilities]
 ffeditc_path = C:/path/to/ffeditc_unicode.exe
+ace2bmp_path = C:/path/to/ace2bmp.exe
+aceit_path = C:/path/to/aceit.exe
+
+[dbtracks]
+babds1_zip_path = C:/path/to/BAB_DS1.zip
+db1_zip_path = C:/path/to/DB1.zip
+db2_zip_path = C:/path/to/DB2.zip
+db3_zip_path = C:/path/to/DB3.zip
+db4_zip_path = C:/path/to/DB4.zip
+db5_zip_path = C:/path/to/DB5.zip
+dbtextures_zip_path = C:/path/to/DB_Textures.zip
+dr2_zip_path = C:/path/to/DR2.zip
+nrzubehoer_zip_path = C:/path/to/NR_Zubehoer.zip
 
 [shapes]
-shapes_load_path = C:/path/to/input/folder
-shapes_processed_path = C:/path/to/output/folder
+input_path = C:/path/to/input/folder/Shapes
+output_path = C:/path/to/output/folder/Shapes
+
+[textures]
+input_path = C:/path/to/input/folder/Textures
+output_path = C:/path/to/output/folder/Textures
+```
+
+### Run the zip extraction script
+
+Now extract the DBTracks packages to the input paths using the `extract_zips.py` script:
+
+```bash
+python ./scripts/extract_zips.py
 ```
 
 ### Run the scripts
