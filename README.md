@@ -1,7 +1,6 @@
 
 # dbtracks-extras
 
-
 <!-- [![Release v1.0.0](https://img.shields.io/badge/Latest%20Version-v1.0.0-blue?style=flat)]() -->
 
 ![No releases](https://img.shields.io/badge/Latest%20Version-no%20releases-red?style=flat)
@@ -113,15 +112,15 @@ output_path = C:/path/to/output/folder/Textures
 
 ### Run the zip extraction script
 
-Now extract the DBTracks zip-file packages using the `extract_zips.py` script:
+Now extract the zip-file packages using the `extract_zips.py` script:
 
 ```bash
 python ./scripts/extract_zips.py
 ```
 
-This will take all `.s`, `.sd` and `.ace` files from the DBTracks zip-files and put them into the input folders.
+This will take all `.s`, `.sd` and `.ace` files from the zip-files and put them into the input folders.
 
-Those zip-files contain nested rar-files each with subfolders, so it's easier to extract them all through scripting than by hand.
+The DBTracks zip-files contain nested rar-files each with subfolders, so it's easier to extract them all through scripting than by hand.
 
 ### Run the scripts
 
