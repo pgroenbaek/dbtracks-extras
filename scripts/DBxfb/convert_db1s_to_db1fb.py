@@ -27,6 +27,8 @@ from shapeio.shape import Point, UVPoint, Vector
 from shapeedit import ShapeEditor
 
 if __name__ == "__main__":
+    print(f"Running ./scripts/DBxfb/convert_db1s_to_db1fb.py")
+    
     config = configparser.ConfigParser()
     config.read("scripts/config.ini")
 
@@ -45,9 +47,9 @@ if __name__ == "__main__":
     shape_names = shapeio.find_directory_files(load_path, match_files, ignore_files)
 
     for idx, sfile_name in enumerate(shape_names):
-        print(f"Shape {idx + 1} of {len(shape_names)}...")
-        
         new_sfile_name = sfile_name.replace("DB1s", "DB1fb")
+
+        print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
         # Convert .s file
         shape_path = f"{load_path}/{sfile_name}"

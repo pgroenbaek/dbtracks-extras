@@ -60,7 +60,7 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 Create a virtual env. You only need to do this once.
 
 ```bash
-python3 -m venv dbtracks-extras
+python -m venv dbtracks-extras
 ```
 
 To activate the virtual env:

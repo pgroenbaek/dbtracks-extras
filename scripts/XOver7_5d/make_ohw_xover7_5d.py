@@ -26,6 +26,8 @@ from shapeedit import ShapeEditor
 from shapeedit.math import coordinates
 
 if __name__ == "__main__":
+    print(f"Running ./scripts/XOver7_5d/make_ohw_xover7_5d.py")
+
     config = configparser.ConfigParser()
     config.read("scripts/config.ini")
 
@@ -54,9 +56,10 @@ if __name__ == "__main__":
     shape_names = shapeio.find_directory_files(load_path, match_files, ignore_files)
 
     for idx, sfile_name in enumerate(shape_names):
-        print(f"Shape {idx + 1} of {len(shape_names)}...")
         new_sfile_name = sfile_name.replace("DB2_", "DB2f_")
         new_sfile_name = new_sfile_name.replace("DB3_", "DB3f_")
+
+        print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
         shape_path = f"{load_path}/{sfile_name}"
         new_shape_path = f"{processed_path}/{new_sfile_name}"

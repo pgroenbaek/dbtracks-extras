@@ -3,4 +3,4 @@ shapeedit==0.5.0b0
 trackshapeutils==0.5.0b0
 pyffeditc==0.1.0
 Pillow==10.4.0
-unrar-cffi==0.2.2
+unrar2-cffi==0.4.0

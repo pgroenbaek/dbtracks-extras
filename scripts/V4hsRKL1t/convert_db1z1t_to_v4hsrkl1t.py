@@ -27,6 +27,8 @@ from pathlib import Path
 from shapeedit import ShapeEditor
 
 if __name__ == "__main__":
+    print(f"Running ./scripts/V4hsRKL1t/convert_db1z1t_to_v4hsrkl1t.py")
+
     config = configparser.ConfigParser()
     config.read("scripts/config.ini")
 
@@ -38,22 +40,26 @@ if __name__ == "__main__":
     processed_path = output_path / "V4hs1t_RKL"
 
     match_files = ["DB1z_a1t*.s"]
-    ignore_files = ["*Tun*", "*Pnt*", "*Frog*"]
+    ignore_files = ["*Tun*", "*Pnt*", "*Frog*", "*870r4d*"]
     
     os.makedirs(processed_path, exist_ok=True)
 
     shape_names = shapeio.find_directory_files(load_path, match_files, ignore_files)
 
     for idx, sfile_name in enumerate(shape_names):
-        print(f"Shape {idx} of {len(shape_names)}...")
-
         # Process .s file
         new_sfile_name = sfile_name.replace("DB1z_", "V4hs1t_RKL_")
         new_sfile_name = new_sfile_name.replace("A1t", "")
         new_sfile_name = new_sfile_name.replace("a1t", "")
 
+        print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
+
         tsection_sfile_name = sfile_name.replace("a2dt", "a2t")
         tsection_sfile_name = tsection_sfile_name.replace("DB1z_", "")
+        tsection_sfile_name = tsection_sfile_name.replace("Lft10.s", "Lft.s")
+        tsection_sfile_name = tsection_sfile_name.replace("Rgt10.s", "Rgt.s")
+        tsection_sfile_name = tsection_sfile_name.replace("Lft11.s", "Lft.s")
+        tsection_sfile_name = tsection_sfile_name.replace("Rgt11.s", "Rgt.s")
         trackcenters = tsu.trackcenters_from_global_tsection(shape_name=tsection_sfile_name, num_points_per_meter=12)
 
         shape_path = f"{load_path}/{sfile_name}"
