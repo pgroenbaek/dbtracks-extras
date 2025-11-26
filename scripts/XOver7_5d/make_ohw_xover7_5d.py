@@ -22,6 +22,7 @@ import configparser
 import pyffeditc
 import shapeio
 from pathlib import Path
+from urllib.request import urlopen
 from shapeedit import ShapeEditor
 from shapeedit.math import coordinates
 
@@ -38,16 +39,17 @@ if __name__ == "__main__":
     load_path = input_path
     processed_path = output_path / "OhwXOver7_5d"
 
-    cwire_shape = "DB22f_A1tDblSlip7_5d.s"
-    match_files = ["DB1_A1tXOver7_5d.s", "DB2_A1tXOver7_5d.s", "DB3_A1tXOver7_5d.s"]
+    match_files = ["DB*_A1tXover7_5d.s"]
     ignore_files = ["*.sd"]
     
     os.makedirs(processed_path, exist_ok=True)
 
-    cwire_shape_path = f"{load_path}/{cwire_shape}"
-
-    pyffeditc.decompress(ffeditc_path, cwire_shape_path)
-    cwire_shape = shapeio.load(cwire_shape_path)
+    print("\tFetching Norbert Rieger's DB22f_A1tDblSlip7_5d.s shape from GitHub...")
+    print("\tThis particular shape is not part of the DBTracks packages and we need it for the overhead wire.")
+    cwire_shape_url = "https://raw.githubusercontent.com/pgroenbaek/shapeedit/refs/heads/master/examples/data/DB22f_A1tDblSlip7_5d.s"
+    with urlopen(cwire_shape_url) as response:
+        cwire_shape_text = response.read().decode("utf-16-le")
+    cwire_shape = shapeio.loads(cwire_shape_text)
     
     cwire_shape_editor = ShapeEditor(cwire_shape)
     cwire_sub_object = cwire_shape_editor.lod_control(0).distance_level(200).sub_object(3)
@@ -56,8 +58,7 @@ if __name__ == "__main__":
     shape_names = shapeio.find_directory_files(load_path, match_files, ignore_files)
 
     for idx, sfile_name in enumerate(shape_names):
-        new_sfile_name = sfile_name.replace("DB2_", "DB2f_")
-        new_sfile_name = new_sfile_name.replace("DB3_", "DB3f_")
+        new_sfile_name = sfile_name.replace("_A1tXover7_5d", "f_A1tXover7_5d")
 
         print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
@@ -70,15 +71,18 @@ if __name__ == "__main__":
         trackshape = shapeio.load(new_shape_path)
 
         shape_editor = ShapeEditor(trackshape)
-        sub_object = shape_editor.lod_control(0).distance_level(500).sub_object(0)
+        sub_object = shape_editor.lod_control(0).distance_level(200).sub_object(0)
 
-        primitive = sub_object.primitives(prim_state_name="Material_#1")[0]
+        primitive = sub_object.primitives(prim_state_name="Rails")[0]
         to_matrix = primitive.matrix
         
         for cwire_primitive in cwire_primitives:
             cwire_vertices = cwire_primitive.vertices()
             cwire_triangles = cwire_primitive.triangles()
             from_matrix = cwire_primitive.matrix
+
+            print(from_matrix)
+            print(to_matrix)
 
             # Insert vertices from 'cwire_primitive' into 'primitive'.
             new_vertex_lookup = {} # Key is vertex index within cwire_sub_object, value is new_vertex.
@@ -88,6 +92,7 @@ if __name__ == "__main__":
                 new_vertex = primitive.add_vertex(cwire_vertex.point, cwire_vertex.uv_point, cwire_vertex.normal)
 
                 new_vertex.point = coordinates.remap_point(new_vertex.point, from_matrix, to_matrix)
+                new_vertex.point.z = new_vertex.point.z + 10
                 new_vertex.normal = coordinates.remap_normal(new_vertex.normal, from_matrix, to_matrix)
 
                 if cwire_vertex.index not in new_vertex_lookup:
