@@ -72,8 +72,8 @@ def extract_from_rars(
                     dest = dest_folder / Path(member.filename).name
                     dest.parent.mkdir(parents=True, exist_ok=True)
 
-                    with open(dest, "wb") as out_f:
-                        out_f.write(data)
+                    with open(dest, "wb") as f:
+                        f.write(data)
                     
                     print(f"  Copied {member.filename} to {dest_folder}")
 
@@ -108,6 +108,7 @@ if __name__ == "__main__":
         ".ace": texture_input_path
     }
 
+    # DBTracks packages
     with tempfile.TemporaryDirectory() as temp_dir:
         temp_path = Path(temp_dir)
 
@@ -118,5 +119,31 @@ if __name__ == "__main__":
 
         rar_files = list(temp_path.rglob("*.rar"))
         extract_from_rars(rar_files, temp_path, targets)
+
+    # ATracks package
+    with tempfile.TemporaryDirectory() as temp_dir:
+        temp_path = Path(temp_dir)
+        atracks_zip_path = Path(config["atracks"]["atracks_zip_path"])
+
+        print(f"Extracting ZIP: {atracks_zip_path}")
+        with zipfile.ZipFile(atracks_zip_path, 'r') as z:
+            z.extractall(temp_path)
+
+        shapes_src = temp_path / "default-track-ATrack" / "GLOBAL" / "shapes"
+        textures_src = temp_path / "default-track-ATrack" / "GLOBAL" / "textures"
+
+        if shapes_src.is_dir():
+            for file in shapes_src.rglob("*"):
+                if file.is_file():
+                    dest = shape_input_path / file.name
+                    shutil.copy(file, dest)
+                    print(f"Copied {file.name} into {shape_input_path}")
+
+        if textures_src.is_dir():
+            for file in textures_src.rglob("*"):
+                if file.is_file():
+                    dest = texture_input_path / file.name
+                    shutil.copy(file, dest)
+                    print(f"Copied {file.name} into {texture_input_path}")
 
     print("\nAll extraction complete!")

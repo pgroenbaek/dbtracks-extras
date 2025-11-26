@@ -22,7 +22,6 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 ## Planned
 
 - More missing XTracks sections
-- XOver7_5d with overhead wire
 - Overhead wires without track
 - Tunnels without LZB cable
 - Tunnels without gantry
@@ -51,6 +50,7 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
     - DB4.zip
     - DB5.zip
     - NR_Zubehoer.zip
+- The ATracks package from [trainsim.com](https://www.trainsim.com/forums/filelib/search-fileid?fid=88570)
 - Utility programs:
     - [ACE2BMP](https://www.trainsim.com/forums/filelib/search-fileid?fid=89768)
     - [AceIt](https://www.trainsim.com/forums/filelib-search-fileid?fid=67904)
@@ -98,6 +98,9 @@ db5_zip_path = C:/path/to/DB5.zip
 dbtextures_zip_path = C:/path/to/DB_Textures.zip
 dr2_zip_path = C:/path/to/DR2.zip
 nrzubehoer_zip_path = C:/path/to/NR_Zubehoer.zip
+
+[atracks]
+atracks_zip_path = C:/path/to/default-track-atrack-01apr25.zip
 
 [shapes]
 input_path = C:/path/to/input/folder/Shapes
