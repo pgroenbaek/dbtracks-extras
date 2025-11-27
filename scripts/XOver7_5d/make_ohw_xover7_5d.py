@@ -23,8 +23,75 @@ import pyffeditc
 import shapeio
 from pathlib import Path
 from urllib.request import urlopen
+from shapeio.shape import Shape
 from shapeedit import ShapeEditor
 from shapeedit.math import coordinates
+
+
+def process_trackshape(trackshape: Shape, cwire_shape: Shape):
+    """
+    Transfers catenary-wire geometry from one of Norbert Rieger's DblSlip7_5d shapes into
+    into one of his Xover7_5d shapes.
+
+    Inserts all vertices and triangles from the catenary-wire primitives into the track shapes's
+    `Rails` primitive. Vertex positions and normals are remapped between the internal coordinate
+    systems used within the shapes.
+
+    Args:
+        trackshape (Shape): The target Xover7_5d track shape to modify.
+        cwire_shape (Shape): The source DblSlip7_5d shape containing catenary-wire geometry.
+
+    Returns:
+        None
+    """
+    cwire_shape_editor = ShapeEditor(cwire_shape)
+    cwire_sub_object = cwire_shape_editor.lod_control(0).distance_level(200).sub_object(3)
+    cwire_primitives = cwire_sub_object.primitives(prim_state_name="mt_cwire")
+
+    shape_editor = ShapeEditor(trackshape)
+    sub_object = shape_editor.lod_control(0).distance_level(200).sub_object(0)
+
+    primitive = sub_object.primitives(prim_state_name="Rails")[0]
+    to_matrix = primitive.matrix
+    
+    for cwire_primitive in cwire_primitives:
+        cwire_vertices = cwire_primitive.vertices()
+        cwire_triangles = cwire_primitive.triangles()
+        from_matrix = cwire_primitive.matrix
+
+        # Insert vertices from 'cwire_primitive' into 'primitive'.
+        new_vertex_lookup = {} # Key is vertex index within cwire_sub_object, value is new_vertex.
+
+        for idx, cwire_vertex in enumerate(cwire_vertices):
+            print(f"\tInserting vertex {idx + 1} of {len(cwire_vertices)}", end='\r')
+
+            new_vertex = primitive.add_vertex(cwire_vertex.point, cwire_vertex.uv_point, cwire_vertex.normal)
+
+            new_vertex.point = coordinates.remap_point(new_vertex.point, from_matrix, to_matrix)
+            new_vertex.point.z = new_vertex.point.z + 10
+            new_vertex.normal = coordinates.remap_normal(new_vertex.normal, from_matrix, to_matrix)
+
+            if cwire_vertex.index not in new_vertex_lookup:
+                new_vertex_lookup[cwire_vertex.index] = new_vertex
+        
+        print("")
+
+        # Insert triangles from 'cwire_primitive' into 'primitive'.
+        for idx, cwire_triangle in enumerate(cwire_triangles):
+            print(f"\tInserting triangle {idx + 1} of {len(cwire_triangles)}", end='\r')
+
+            cwire_triangle_vertices = cwire_triangle.vertices()
+
+            vertex1 = new_vertex_lookup[cwire_triangle_vertices[0].index]
+            vertex2 = new_vertex_lookup[cwire_triangle_vertices[1].index]
+            vertex3 = new_vertex_lookup[cwire_triangle_vertices[2].index]
+
+            new_triangle = primitive.insert_triangle(vertex1, vertex2, vertex3)
+            new_triangle.face_normal = coordinates.remap_normal(new_triangle.face_normal, from_matrix, to_matrix)
+        
+        print("")
+
+
 
 if __name__ == "__main__":
     print(f"Running ./scripts/XOver7_5d/make_ohw_xover7_5d.py")
@@ -50,10 +117,6 @@ if __name__ == "__main__":
     with urlopen(cwire_shape_url) as response:
         cwire_shape_text = response.read().decode("utf-16-le")
     cwire_shape = shapeio.loads(cwire_shape_text)
-    
-    cwire_shape_editor = ShapeEditor(cwire_shape)
-    cwire_sub_object = cwire_shape_editor.lod_control(0).distance_level(200).sub_object(3)
-    cwire_primitives = cwire_sub_object.primitives(prim_state_name="mt_cwire")
 
     shape_names = shapeio.find_directory_files(load_path, match_files, ignore_files)
 
@@ -62,54 +125,17 @@ if __name__ == "__main__":
 
         print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
-        shape_path = f"{load_path}/{sfile_name}"
-        new_shape_path = f"{processed_path}/{new_sfile_name}"
+        # Process .s file
+        shape_path = load_path / sfile_name
+        new_shape_path = processed_path / new_sfile_name
 
         shapeio.copy(shape_path, new_shape_path)
 
         pyffeditc.decompress(ffeditc_path, new_shape_path)
         trackshape = shapeio.load(new_shape_path)
 
-        shape_editor = ShapeEditor(trackshape)
-        sub_object = shape_editor.lod_control(0).distance_level(200).sub_object(0)
+        process_trackshape(trackshape, cwire_shape)
 
-        primitive = sub_object.primitives(prim_state_name="Rails")[0]
-        to_matrix = primitive.matrix
-        
-        for cwire_primitive in cwire_primitives:
-            cwire_vertices = cwire_primitive.vertices()
-            cwire_triangles = cwire_primitive.triangles()
-            from_matrix = cwire_primitive.matrix
-
-            # Insert vertices from 'cwire_primitive' into 'primitive'.
-            new_vertex_lookup = {} # Key is vertex index within cwire_sub_object, value is new_vertex.
-
-            for idx, cwire_vertex in enumerate(cwire_vertices):
-                print(f"\tInserting vertex {idx + 1} of {len(cwire_vertices)}", end='\r')
-                new_vertex = primitive.add_vertex(cwire_vertex.point, cwire_vertex.uv_point, cwire_vertex.normal)
-
-                new_vertex.point = coordinates.remap_point(new_vertex.point, from_matrix, to_matrix)
-                new_vertex.point.z = new_vertex.point.z + 10
-                new_vertex.normal = coordinates.remap_normal(new_vertex.normal, from_matrix, to_matrix)
-
-                if cwire_vertex.index not in new_vertex_lookup:
-                    new_vertex_lookup[cwire_vertex.index] = new_vertex
-            
-            print("")
-
-            # Insert triangles from 'cwire_primitive' into 'primitive'.
-            for idx, cwire_triangle in enumerate(cwire_triangles):
-                print(f"\tInserting triangle {idx + 1} of {len(cwire_triangles)}", end='\r')
-                cwire_triangle_vertices = cwire_triangle.vertices()
-                vertex1 = new_vertex_lookup[cwire_triangle_vertices[0].index]
-                vertex2 = new_vertex_lookup[cwire_triangle_vertices[1].index]
-                vertex3 = new_vertex_lookup[cwire_triangle_vertices[2].index]
-                new_triangle = primitive.insert_triangle(vertex1, vertex2, vertex3)
-
-                new_triangle.face_normal = coordinates.remap_normal(new_triangle.face_normal, from_matrix, to_matrix)
-            
-            print("")
-            
         shapeio.dump(trackshape, new_shape_path)
         pyffeditc.compress(ffeditc_path, new_shape_path)
 
@@ -117,8 +143,8 @@ if __name__ == "__main__":
         sdfile_name = sfile_name.replace(".s", ".sd")
         new_sdfile_name = new_sfile_name.replace(".s", ".sd")
 
-        sdfile_path = f"{load_path}/{sdfile_name}"
-        new_sdfile_path = f"{processed_path}/{new_sdfile_name}"
+        sdfile_path = load_path / sdfile_name
+        new_sdfile_path = processed_path / new_sdfile_name
 
         shapeio.copy(sdfile_path, new_sdfile_path)
         shapeio.replace_ignorecase(new_sdfile_path, sfile_name, new_sfile_name)

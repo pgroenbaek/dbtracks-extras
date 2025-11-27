@@ -26,6 +26,40 @@ from pathlib import Path
 from shapeio.shape import Point, UVPoint, Vector
 from shapeedit import ShapeEditor
 
+
+def process_trackshape(trackshape: Shape):
+    """
+    Converts a DB1s tracksection to DB1fb.
+    
+    Removes the LZB cable and swaps textures to conduct the conversion.
+
+    Args:
+        trackshape (Shape): The target DB1s track shape to modify.
+
+    Returns:
+        None
+    """
+    for idx, image in enumerate(trackshape.images):
+        image = re.sub(r"DB_TrackSfs1.ace", "DB_Track1.ace", image, flags=re.IGNORECASE)
+        image = re.sub(r"DB_TrackSfs1s.ace", "DB_Track1s.ace", image, flags=re.IGNORECASE)
+        image = re.sub(r"DB_TrackSfs1w.ace", "DB_Track1w.ace", image, flags=re.IGNORECASE)
+        image = re.sub(r"DB_TrackSfs1sw.ace", "DB_Track1sw.ace", image, flags=re.IGNORECASE)
+        trackshape.images[idx] = image
+
+    trackshape_editor = ShapeEditor(trackshape)
+    lod_control = trackshape_editor.lod_control(0)
+
+    for lod_dlevel in lod_control.distance_levels():
+        for sub_object in lod_dlevel.sub_objects():
+            vertices_in_subobject = sub_object.vertices()
+            for vertex in vertices_in_subobject:
+                if vertex.point.y == 0.133:
+                    vertex.point.y = 0.0833
+                elif vertex.point.y == 0.145:
+                    vertex.point.y = 0.0945
+
+
+
 if __name__ == "__main__":
     print(f"Running ./scripts/DBxfb/convert_db1s_to_db1fb.py")
     
@@ -51,33 +85,16 @@ if __name__ == "__main__":
 
         print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
-        # Convert .s file
-        shape_path = f"{load_path}/{sfile_name}"
-        new_shape_path = f"{processed_path}/{new_sfile_name}"
+        # Process .s file
+        shape_path = load_path / sfile_name
+        new_shape_path = processed_path / new_sfile_name
 
         shapeio.copy(shape_path, new_shape_path)
 
         pyffeditc.decompress(ffeditc_path, new_shape_path)
         trackshape = shapeio.load(new_shape_path)
 
-        for idx, image in enumerate(trackshape.images):
-            image = re.sub(r"DB_TrackSfs1.ace", "DB_Track1.ace", image, flags=re.IGNORECASE)
-            image = re.sub(r"DB_TrackSfs1s.ace", "DB_Track1s.ace", image, flags=re.IGNORECASE)
-            image = re.sub(r"DB_TrackSfs1w.ace", "DB_Track1w.ace", image, flags=re.IGNORECASE)
-            image = re.sub(r"DB_TrackSfs1sw.ace", "DB_Track1sw.ace", image, flags=re.IGNORECASE)
-            trackshape.images[idx] = image
-
-        trackshape_editor = ShapeEditor(trackshape)
-        lod_control = trackshape_editor.lod_control(0)
-
-        for lod_dlevel in lod_control.distance_levels():
-            for sub_object in lod_dlevel.sub_objects():
-                vertices_in_subobject = sub_object.vertices()
-                for vertex in vertices_in_subobject:
-                    if vertex.point.y == 0.133:
-                        vertex.point.y = 0.0833
-                    elif vertex.point.y == 0.145:
-                        vertex.point.y = 0.0945
+        process_trackshape(trackshape)
         
         shapeio.dump(trackshape, new_shape_path)
         pyffeditc.compress(ffeditc_path, new_shape_path)
@@ -86,8 +103,8 @@ if __name__ == "__main__":
         sdfile_name = sfile_name.replace(".s", ".sd")
         new_sdfile_name = new_sfile_name.replace(".s", ".sd")
 
-        sdfile_path = f"{load_path}/{sdfile_name}"
-        new_sdfile_path = f"{processed_path}/{new_sdfile_name}"
+        sdfile_path = load_path / sdfile_name
+        new_sdfile_path = processed_path / new_sdfile_name
 
         shapeio.copy(sdfile_path, new_sdfile_path)
         shapeio.replace_ignorecase(new_sdfile_path, sfile_name, new_sfile_name)
