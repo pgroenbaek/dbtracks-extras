@@ -180,8 +180,6 @@ if __name__ == "__main__":
         new_sfile_name = new_sfile_name.replace("A1t", "")
         new_sfile_name = new_sfile_name.replace("a1t", "")
 
-        print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
-
         tsection_sfile_name = sfile_name.replace("a2dt", "a2t")
         tsection_sfile_name = tsection_sfile_name.replace("DB1z_", "")
         tsection_sfile_name = tsection_sfile_name.replace("Lft10.s", "Lft.s")
@@ -189,6 +187,8 @@ if __name__ == "__main__":
         tsection_sfile_name = tsection_sfile_name.replace("Lft11.s", "Lft.s")
         tsection_sfile_name = tsection_sfile_name.replace("Rgt11.s", "Rgt.s")
         trackcenters = tsu.trackcenters_from_global_tsection(shape_name=tsection_sfile_name, num_points_per_meter=12)
+
+        print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
         # Process .s file
         shape_path = load_path / sfile_name

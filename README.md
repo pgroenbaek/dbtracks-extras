@@ -11,16 +11,15 @@ Python scripts to create extra shapes that complement Norbert Rieger's existing 
 
 ## Extra shapes available from this package
 
-There are lots of extra custom track sections and shapes available in this package, including:
-- Some missing XTracks sections
+Currently there are no releases, but scripts for the following have been made so far:
+- Some missing XTracks sections for the DB1fb variant
 - XOver7_5d with overhead wire
 - V4hs_RKL single track sections
 
-For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
+<!-- For a full of shapes list see [this document](./docs/full-list-of-shapes.md). -->
 
 ## Planned
-
-- More missing XTracks sections
+- More missing XTracks sections for other track variants
 - Overhead wires without track
 - Tunnels without LZB cable
 - Tunnels without gantry
