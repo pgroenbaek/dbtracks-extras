@@ -81,9 +81,6 @@ if __name__ == "__main__":
             cwire_triangles = cwire_primitive.triangles()
             from_matrix = cwire_primitive.matrix
 
-            print(from_matrix)
-            print(to_matrix)
-
             # Insert vertices from 'cwire_primitive' into 'primitive'.
             new_vertex_lookup = {} # Key is vertex index within cwire_sub_object, value is new_vertex.
 
