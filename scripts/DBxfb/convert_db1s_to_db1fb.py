@@ -83,6 +83,10 @@ if __name__ == "__main__":
     for idx, sfile_name in enumerate(shape_names):
         new_sfile_name = sfile_name.replace("DB1s", "DB1fb")
 
+        # Skip if it already exists in the original DBTracks packages.
+        if os.path.exists(input_path / new_sfile_name):
+            continue
+
         print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
         # Process .s file

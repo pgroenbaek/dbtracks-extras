@@ -50,9 +50,9 @@ Currently there are no releases, but scripts for the following have been made so
     - NR_Zubehoer.zip
 - The ATracks package from [trainsim.com](https://www.trainsim.com/forums/filelib/search-fileid?fid=88570)
 - Utility programs:
-    - [ACE2BMP](https://www.trainsim.com/forums/filelib/search-fileid?fid=89768)
-    - [AceIt](https://www.trainsim.com/forums/filelib-search-fileid?fid=67904)
     - ffeditc_unicode.exe (found in the utils folder of an MSTS installation)
+    - ace2png.exe from Pete Willard's [Ace2DDS package](https://github.com/pwillard/Ace2DDS/releases)
+    - [AceIt](https://www.trainsim.com/forums/filelib-search-fileid?fid=67904)
 
 ### Set up a virtual env
 
@@ -83,7 +83,7 @@ For example:
 ```ini
 [utilities]
 ffeditc_path = C:/path/to/ffeditc_unicode.exe
-ace2bmp_path = C:/path/to/ace2bmp.exe
+ace2png_path = C:/path/to/ace2png.exe
 aceit_path = C:/path/to/aceit.exe
 
 [dbtracks]

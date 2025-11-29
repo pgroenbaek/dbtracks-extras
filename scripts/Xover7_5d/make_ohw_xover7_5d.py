@@ -104,7 +104,7 @@ if __name__ == "__main__":
     output_path = Path(config["shapes"]["output_path"])
 
     load_path = input_path
-    processed_path = output_path / "OhwXOver7_5d"
+    processed_path = output_path / "Xover7_5d"
 
     match_files = ["DB*_A1tXover7_5d.s"]
     ignore_files = ["*.sd"]
