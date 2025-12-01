@@ -22,7 +22,11 @@ import subprocess
 if __name__ == "__main__":
     scripts = [
         "scripts/DBxfb/convert_db1s_to_db1fb.py",
-        "scripts/V4hsRKL1t/convert_db1z1t_to_v4hsrkl1t.py",
+        "scripts/DBxfb/convert_db1s_to_db2fb.py",
+        "scripts/DBxfb/convert_db1s_to_db10fb.py",
+        "scripts/DBxfb/convert_db1s_to_db20fb.py",
+        "scripts/DBxfb/convert_db1s_to_db22fb.py",
+        "scripts/V4hs1t_RKL/convert_db1z1t_to_v4hs1trkl.py",
         "scripts/Xover7_5d/make_ohw_xover7_5d.py",
     ]
 

@@ -29,7 +29,7 @@ from shapeedit import ShapeEditor
 
 def process_trackshape(trackshape: Shape):
     """
-    Converts a DB1s tracksection to DB1fb.
+    Converts a DB1s tracksection to DB20fb.
     
     Removes the LZB cable and swaps textures to conduct the conversion.
 
@@ -41,10 +41,11 @@ def process_trackshape(trackshape: Shape):
     """
     trackshape_editor = ShapeEditor(trackshape)
 
-    trackshape_editor.replace_texture_image("DB_TrackSfs1.ace", "DB_Track1.ace")
-    trackshape_editor.replace_texture_image("DB_TrackSfs1s.ace", "DB_Track1s.ace")
-    trackshape_editor.replace_texture_image("DB_TrackSfs1w.ace", "DB_Track1w.ace")
-    trackshape_editor.replace_texture_image("DB_TrackSfs1sw.ace", "DB_Track1sw.ace")
+    trackshape_editor.replace_texture_image("DB_Rails1.ace", "DB_Rails20.ace")
+    trackshape_editor.replace_texture_image("DB_TrackSfs1.ace", "DB_Track2.ace")
+    trackshape_editor.replace_texture_image("DB_TrackSfs1s.ace", "DB_Track2s.ace")
+    trackshape_editor.replace_texture_image("DB_TrackSfs1w.ace", "DB_Track2w.ace")
+    trackshape_editor.replace_texture_image("DB_TrackSfs1sw.ace", "DB_Track2sw.ace")
 
     lod_control = trackshape_editor.lod_control(0)
 
@@ -60,7 +61,7 @@ def process_trackshape(trackshape: Shape):
 
 
 if __name__ == "__main__":
-    print(f"Running ./scripts/DBxfb/convert_db1s_to_db1fb.py")
+    print(f"Running ./scripts/DBxfb/convert_db1s_to_db20fb.py")
     
     config = configparser.ConfigParser()
     config.read("scripts/config.ini")
@@ -70,7 +71,7 @@ if __name__ == "__main__":
     output_path = Path(config["shapes"]["output_path"])
 
     load_path = input_path
-    processed_path = output_path / "DB1fb"
+    processed_path = output_path / "DB20fb"
 
     match_files = ["DB1s_*.s"]
     ignore_files = ["*Tun*", "*Pnt*", "*Frog*"]
@@ -80,7 +81,7 @@ if __name__ == "__main__":
     shape_names = shapeio.find_directory_files(load_path, match_files, ignore_files)
 
     for idx, sfile_name in enumerate(shape_names):
-        new_sfile_name = sfile_name.replace("DB1s", "DB1fb")
+        new_sfile_name = sfile_name.replace("DB1s", "DB20fb")
 
         # Skip if it already exists in the original DBTracks packages.
         if os.path.exists(load_path / new_sfile_name):
