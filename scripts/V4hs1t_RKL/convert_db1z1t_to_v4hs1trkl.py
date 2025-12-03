@@ -155,7 +155,7 @@ def process_trackshape(trackshape: Shape, trackcenters: List[Trackcenter]):
 
 
 if __name__ == "__main__":
-    print(f"Running ./scripts/V4hsRKL1t/convert_db1z1t_to_v4hsrkl1t.py")
+    print(f"Running ./scripts/V4hsRKL1t/convert_db1z1t_to_v4hs1trkl.py")
 
     config = configparser.ConfigParser()
     config.read("scripts/config.ini")

@@ -21,6 +21,11 @@ import subprocess
 
 if __name__ == "__main__":
     scripts = [
+        "scripts/DBxb/convert_db1s_to_db1b.py",
+        "scripts/DBxb/convert_db1s_to_db2b.py",
+        "scripts/DBxb/convert_db1s_to_db10b.py",
+        "scripts/DBxb/convert_db1s_to_db20b.py",
+        "scripts/DBxb/convert_db1s_to_db22b.py",
         "scripts/DBxfb/convert_db1s_to_db1fb.py",
         "scripts/DBxfb/convert_db1s_to_db2fb.py",
         "scripts/DBxfb/convert_db1s_to_db10fb.py",
