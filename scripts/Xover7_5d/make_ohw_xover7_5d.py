@@ -113,7 +113,7 @@ if __name__ == "__main__":
 
     print("\tFetching Norbert Rieger's DB22f_A1tDblSlip7_5d.s shape from GitHub...")
     print("\tThis particular shape is not part of the DBTracks packages and we need it for the overhead wire.")
-    cwire_shape_url = "https://github.com/pgroenbaek/dblslip7_5d-ohw/raw/refs/heads/master/data/DB22f_A1tDblSlip7_5d.s"
+    cwire_shape_url = "https://raw.githubusercontent.com/pgroenbaek/dblslip7_5d-ohw/refs/heads/master/data/DB22f_A1tDblSlip7_5d.s"
     with urlopen(cwire_shape_url) as response:
         cwire_shape_text = response.read().decode("utf-16-le")
     cwire_shape = shapeio.loads(cwire_shape_text)
