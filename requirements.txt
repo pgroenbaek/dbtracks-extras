@@ -1,6 +1,6 @@
 shapeio==0.5.0b3
 shapeedit==0.5.0b3
 trackshapeutils==0.5.0b3
-pyffeditc==0.1.1
+pyffeditc==0.1.2
 Pillow==10.4.0
 unrar2-cffi==0.4.0
