@@ -44,7 +44,7 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 
 ### Prerequisites
 
-- Python 3.7 or newer
+- Python 3.7 to 3.13
 - All DBTracks packages from [the-train.de](https://the-train.de/downloads/entry-download/11252-dbtracks):
     - BAB_DS1.zip
     - DB_Textures.zip
