@@ -17,6 +17,8 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 """
 
+import os
+import sys
 import subprocess
 
 if __name__ == "__main__":
@@ -36,4 +38,4 @@ if __name__ == "__main__":
     ]
 
     for s in scripts:
-        subprocess.run(["python", s])
+        subprocess.run([sys.executable, s], cwd=os.getcwd())

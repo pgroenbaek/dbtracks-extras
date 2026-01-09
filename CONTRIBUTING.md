@@ -9,7 +9,7 @@ Please follow the guidelines below to make the contribution process as smooth as
 1. Fork the repository, then clone your fork to a local folder.
 
 2. Create a local branch for your work.
-   - Example: `git checkout -b feature/add-cool-function`
+   - Example: `git checkout -b script/add-cool-script`
 
 3. Make your changes on your branch.
 

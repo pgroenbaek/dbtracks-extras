@@ -153,5 +153,7 @@ if __name__ == "__main__":
         html_table = make_shapes_table_from_folder(f"{output_path}/{folder}", columns=4)
         document.append(f"{html_table}\n\n")
 
+    os.makedirs("./docs", exist_ok=True)
+
     with open("./docs/full-list-of-shapes.md", "wt", encoding="utf-8") as f:
         f.write("".join(document))
