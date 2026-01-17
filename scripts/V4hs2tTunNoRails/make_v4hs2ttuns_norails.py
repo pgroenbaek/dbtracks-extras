@@ -52,7 +52,7 @@ def process_trackshape(trackshape: Shape):
     for lod_dlevel in lod_control.distance_levels():
         for sub_object in lod_dlevel.sub_objects():
             for prim_state_name in prim_state_names_to_remove:
-                for primitive in sub_object.primitives(prim_state_name=prim_state_name)
+                for primitive in sub_object.primitives(prim_state_name=prim_state_name):
                     for vertex in primitive.vertices():
                         primitive.remove_triangles_connected_to(vertex)
 
@@ -72,14 +72,14 @@ if __name__ == "__main__":
     processed_path = output_path / "V4hs2tTunNoRails"
 
     match_files = ["V4hs2tTunS_*.s"]
-    ignore_files = ["*Tun*", "*Pnt*", "*Frog*", "*Xover*", "*Slip*", "*DKW*"]
+    ignore_files = ["*Pnt*", "*Frog*", "*Xover*", "*Slip*", "*DKW*", "*.sd"]
     
     os.makedirs(processed_path, exist_ok=True)
 
     shape_names = shapeio.find_directory_files(load_path, match_files, ignore_files)
 
     for idx, sfile_name in enumerate(shape_names):
-        new_sfile_name = sfile_name + "_nr"
+        new_sfile_name = sfile_name.replace(".s", "_nr.s")
 
         print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
