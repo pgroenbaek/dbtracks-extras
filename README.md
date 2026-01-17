@@ -55,6 +55,7 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
     - DB5.zip
     - NR_Zubehoer.zip
 - The ATracks package from [trainsim.com](https://www.trainsim.com/forums/filelib/search-fileid?fid=88570)
+- The V4hs shapes from e.g. from the [NIM](https://the-train.de/downloads/entry/11011-schnellfahrstrecke-n%C3%BCrnberg-ingolstadt-m%C3%BCnchen-v1-0/) or [ICE-HB](https://the-train.de/downloads/entry/11282-sfs-hannover-berlin-v3/) routes.
 - Utility programs:
     - ffeditc_unicode.exe (found in the utils folder of an MSTS installation)
     - ace2png.exe from Pete Willard's [Ace2DDS package](https://github.com/pwillard/Ace2DDS/releases)
