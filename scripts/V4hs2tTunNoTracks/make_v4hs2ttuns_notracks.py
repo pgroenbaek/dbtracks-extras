@@ -59,7 +59,7 @@ def process_trackshape(trackshape: Shape):
 
 
 if __name__ == "__main__":
-    print(f"Running ./scripts/V4hs2tTunNoRails/make_v4hs2ttuns_norails.py")
+    print(f"Running ./scripts/V4hs2tTunNoTracks/make_v4hs2ttuns_notracks.py")
     
     config = configparser.ConfigParser()
     config.read("scripts/config.ini")
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     output_path = Path(config["shapes"]["output_path"])
 
     load_path = input_path
-    processed_path = output_path / "V4hs2tTunNoRails"
+    processed_path = output_path / "V4hs2tTunNoTracks"
 
     match_files = ["V4hs2tTunS_*.s"]
     ignore_files = ["*Pnt*", "*Frog*", "*Xover*", "*Slip*", "*DKW*", "*.sd"]
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     shape_names = shapeio.find_directory_files(load_path, match_files, ignore_files)
 
     for idx, sfile_name in enumerate(shape_names):
-        new_sfile_name = sfile_name.replace(".s", "_nr.s")
+        new_sfile_name = sfile_name.replace(".s", "_nt.s")
 
         print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
