@@ -18,7 +18,9 @@ Python scripts to create extra shapes that complement Norbert Rieger's existing 
 Currently there are no releases, but scripts for the following have been made so far:
 - Missing XTracks sections for some fb variants
 - XOver7_5d with overhead wire
+- Some fb track variants without tunnel walls
 - V4hs_RKL 1t track sections
+- Some V4hs tunnels without tracks
 
 For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
 
@@ -55,7 +57,7 @@ For a full of shapes list see [this document](./docs/full-list-of-shapes.md).
     - DB5.zip
     - NR_Zubehoer.zip
 - The ATracks package from [trainsim.com](https://www.trainsim.com/forums/filelib/search-fileid?fid=88570)
-- The V4hs shapes from e.g. from the [NIM](https://the-train.de/downloads/entry/11011-schnellfahrstrecke-n%C3%BCrnberg-ingolstadt-m%C3%BCnchen-v1-0/) or [ICE-HB](https://the-train.de/downloads/entry/11282-sfs-hannover-berlin-v3/) routes.
+- The V4 shapes e.g. from the [NIM](https://the-train.de/downloads/entry/11011-schnellfahrstrecke-n%C3%BCrnberg-ingolstadt-m%C3%BCnchen-v1-0/), [ICE-HB](https://the-train.de/downloads/entry/11282-sfs-hannover-berlin-v3/) and [Köln-Frankfurt](https://the-train.de/downloads/entry/2724-neubaustrecke-k%C3%B6ln-rhein-main-v-1-2/) routes.
 - Utility programs:
     - ffeditc_unicode.exe (found in the utils folder of an MSTS installation)
     - ace2png.exe from Pete Willard's [Ace2DDS package](https://github.com/pwillard/Ace2DDS/releases)

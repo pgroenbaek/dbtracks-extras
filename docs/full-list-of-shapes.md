@@ -3,7 +3,7 @@
 
 This is the full list of shapes included in the DBTracks Extras package. None of these exist in Norbert's original packages - they serve as complementary additions to the original shapes.
 
-Total number of shapes: 2369
+Total number of shapes: 2390
 
 <details>
   <summary>
@@ -3675,35 +3675,66 @@ Number of shapes: 140
 
 ## V4hs2tTunNoTracks
 
-Number of shapes: 19
+Number of shapes: 40
 
 <table>
   <tbody>
     <tr>
       <td>V4hs2tTunS_1000r01d_nt.s</td>
+      <td>V4hs2tTunS_1000r05d_nt.s</td>
       <td>V4hs2tTunS_1000r10d_nt.s</td>
       <td>V4hs2tTunS_1000r20d_nt.s</td>
-      <td>V4hs2tTunS_1500r01d_nt.s</td>
     </tr>
     <tr>
+      <td>V4hs2tTunS_1500r01d_nt.s</td>
       <td>V4hs2tTunS_1500r05d_nt.s</td>
       <td>V4hs2tTunS_1500r10d_nt.s</td>
+      <td>V4hs2tTunS_1500r20d_nt.s</td>
+    </tr>
+    <tr>
       <td>V4hs2tTunS_2000r01d_nt.s</td>
       <td>V4hs2tTunS_2000r05d_nt.s</td>
+      <td>V4hs2tTunS_2000r10d_nt.s</td>
+      <td>V4hs2tTunS_2000r20d_nt.s</td>
     </tr>
     <tr>
-      <td>V4hs2tTunS_2000r10d_nt.s</td>
+      <td>V4hs2tTunS_3000r00_2d_g_nt.s</td>
+      <td>V4hs2tTunS_3000r00_2d_nt.s</td>
+      <td>V4hs2tTunS_3000r01d_nt.s</td>
+      <td>V4hs2tTunS_3000r05d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunS_4000r00_2d_g_nt.s</td>
+      <td>V4hs2tTunS_4000r00_2d_nt.s</td>
       <td>V4hs2tTunS_4000r01d_nt.s</td>
       <td>V4hs2tTunS_4000r05d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunS_6000r00_1d_g_nt.s</td>
+      <td>V4hs2tTunS_6000r00_1d_nt.s</td>
       <td>V4hs2tTunS_6000r00_5d_nt.s</td>
-    </tr>
-    <tr>
       <td>V4hs2tTunS_6000r01d_nt.s</td>
-      <td>V4hs2tTunS_6000r05d_nt.s</td>
-      <td>V4hs2tTunS_Strt_020m_nt.s</td>
-      <td>V4hs2tTunS_Strt_050m_nt.s</td>
     </tr>
     <tr>
+      <td>V4hs2tTunS_6000r05d_nt.s</td>
+      <td>V4hs2tTunS_8000r00_1d_g_nt.s</td>
+      <td>V4hs2tTunS_8000r00_1d_nt.s</td>
+      <td>V4hs2tTunS_8000r00_5d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunS_8000r01d_nt.s</td>
+      <td>V4hs2tTunS_8000r02_5d_nt.s</td>
+      <td>V4hs2tTunS_Strt_000_3m_nt.s</td>
+      <td>V4hs2tTunS_Strt_001m_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunS_Strt_005m_nt.s</td>
+      <td>V4hs2tTunS_Strt_010m_g_nt.s</td>
+      <td>V4hs2tTunS_Strt_010m_nt.s</td>
+      <td>V4hs2tTunS_Strt_020m_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunS_Strt_050m_nt.s</td>
       <td>V4hs2tTunS_Strt_100m_nt.s</td>
       <td>V4hs2tTunS_Strt_250m_nt.s</td>
       <td>V4hs2tTunS_Strt_500m_nt.s</td>

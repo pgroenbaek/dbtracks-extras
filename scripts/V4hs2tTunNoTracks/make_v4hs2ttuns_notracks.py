@@ -53,8 +53,7 @@ def process_trackshape(trackshape: Shape):
         for sub_object in lod_dlevel.sub_objects():
             for prim_state_name in prim_state_names_to_remove:
                 for primitive in sub_object.primitives(prim_state_name=prim_state_name):
-                    for vertex in primitive.vertices():
-                        primitive.remove_triangles_connected_to(vertex)
+                    primitive.remove_all_triangles()
 
 
 
