@@ -3,7 +3,7 @@
 
 This is the full list of shapes included in the DBTracks Extras package. None of these exist in Norbert's original packages - they serve as complementary additions to the original shapes.
 
-Total number of shapes: 2390
+Total number of shapes: 2595
 
 <details>
   <summary>
@@ -22,6 +22,7 @@ Total number of shapes: 2390
 - [DB20fb](#db20fb)
 - [DB22b](#db22b)
 - [DB22fb](#db22fb)
+- [DBTunNoTracks](#dbtunnotracks)
 - [V4hs1t_RKL](#v4hs1t_rkl)
 - [V4hs2tTunNoTracks](#v4hs2ttunnotracks)
 - [XOver7_5d](#xover7_5d)
@@ -3454,6 +3455,278 @@ Number of shapes: 177
   </tbody>
 </table>
 
+## DBTunNoTracks
+
+Number of shapes: 175
+
+<table>
+  <tbody>
+    <tr>
+      <td>DB_a1t0_3mStrtTun_nt.s</td>
+      <td>DB_a1t1mStrtTun_nt.s</td>
+      <td>DB_a1t5mStrtTun_nt.s</td>
+      <td>DB_a1t10mStrtRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t10mStrtRndTun_nt.s</td>
+      <td>DB_a1t10mStrtTun_nt.s</td>
+      <td>DB_a1t20mStrtTun_nt.s</td>
+      <td>DB_a1t50mStrtRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t50mStrtRndTun_nt.s</td>
+      <td>DB_a1t50mStrtTun_nt.s</td>
+      <td>DB_a1t100mStrtRndTun_n0_nt.s</td>
+      <td>DB_a1t100mStrtRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t100mStrtTun_nt.s</td>
+      <td>DB_a1t120r5dTun_nt.s</td>
+      <td>DB_a1t120r10dTun_nt.s</td>
+      <td>DB_a1t120r20dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t250r5dRndTun_nt.s</td>
+      <td>DB_a1t250r5dTun_nt.s</td>
+      <td>DB_a1t250r10dRndTun_nt.s</td>
+      <td>DB_a1t250r10dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t250r20dTun_nt.s</td>
+      <td>DB_a1t500r5dRndTun_n0_nt.s</td>
+      <td>DB_a1t500r5dRndTun_nt.s</td>
+      <td>DB_a1t500r5dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t500r10dRndTun_n0_nt.s</td>
+      <td>DB_a1t500r10dRndTun_nt.s</td>
+      <td>DB_a1t500r10dTun_nt.s</td>
+      <td>DB_a1t1000r5dRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t1000r5dRndTun_nt.s</td>
+      <td>DB_a1t1000r5dTun_nt.s</td>
+      <td>DB_a1t1000r10dRndTun_n0_nt.s</td>
+      <td>DB_a1t1000r10dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t1000r10dTun_nt.s</td>
+      <td>DB_a1t1500r5dRndTun_n0_nt.s</td>
+      <td>DB_a1t1500r5dRndTun_nt.s</td>
+      <td>DB_a1t1500r5dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t1500r10dRndTun_n0_nt.s</td>
+      <td>DB_a1t1500r10dRndTun_nt.s</td>
+      <td>DB_a1t1500r10dTun_nt.s</td>
+      <td>DB_a1t2000r5dRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a1t2000r5dRndTun_nt.s</td>
+      <td>DB_a1t2000r5dTun_nt.s</td>
+      <td>DB_a1t2000r10dTun_nt.s</td>
+      <td>DB_a1t2000r20dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t0_3mStrtRndTun_nt.s</td>
+      <td>DB_a2t0_3mStrtTun_nt.s</td>
+      <td>DB_a2t1mStrtRndTun_nt.s</td>
+      <td>DB_a2t1mStrtTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t5mStrtRndTun_nt.s</td>
+      <td>DB_a2t5mStrtTun_nt.s</td>
+      <td>DB_a2t10mStrtRndTun_n0_nt.s</td>
+      <td>DB_a2t10mStrtRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t10mStrtTun_nt.s</td>
+      <td>DB_a2t20mStrtRndTun_nt.s</td>
+      <td>DB_a2t20mStrtTun_nt.s</td>
+      <td>DB_a2t50mStrtRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t100mStrtRndTun_n0_nt.s</td>
+      <td>DB_a2t100mStrtRndTun_nt.s</td>
+      <td>DB_a2t100mStrtTun_nt.s</td>
+      <td>DB_a2t250mStrtRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t250mStrtRndTun_nt.s</td>
+      <td>DB_a2t250mStrtTun_nt.s</td>
+      <td>DB_a2t250r5dRndTun_nt.s</td>
+      <td>DB_a2t250r5dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t250r10dRndTun_n0_nt.s</td>
+      <td>DB_a2t250r10dRndTun_nt.s</td>
+      <td>DB_a2t250r10dTun_nt.s</td>
+      <td>DB_a2t250r20dRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t250r20dRndTun_nt.s</td>
+      <td>DB_a2t250r20dTun_nt.s</td>
+      <td>DB_a2t300r5dRndTun_nt.s</td>
+      <td>DB_a2t300r10dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t300r20dRndTun_nt.s</td>
+      <td>DB_a2t500mStrtRndTun_n0_nt.s</td>
+      <td>DB_a2t500mStrtRndTun_nt.s</td>
+      <td>DB_a2t500mStrtTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t500r5dRndTun_n0_nt.s</td>
+      <td>DB_a2t500r5dRndTun_nt.s</td>
+      <td>DB_a2t500r5dTun_nt.s</td>
+      <td>DB_a2t500r10dRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t500r10dRndTun_nt.s</td>
+      <td>DB_a2t500r10dTun_nt.s</td>
+      <td>DB_a2t500r20dRndTun_n0_nt.s</td>
+      <td>DB_a2t500r20dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t500r20dTun_nt.s</td>
+      <td>DB_a2t1000r5dRndTun_n0_nt.s</td>
+      <td>DB_a2t1000r5dRndTun_nt.s</td>
+      <td>DB_a2t1000r5dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t1000r10dRndTun_n0_nt.s</td>
+      <td>DB_a2t1000r10dRndTun_nt.s</td>
+      <td>DB_a2t1000r10dTun_nt.s</td>
+      <td>DB_a2t1000r20dRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t1000r20dRndTun_nt.s</td>
+      <td>DB_a2t1000r20dTun_nt.s</td>
+      <td>DB_a2t1500r5dRndTun_n0_nt.s</td>
+      <td>DB_a2t1500r5dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t1500r5dTun_nt.s</td>
+      <td>DB_a2t1500r10dRndTun_n0_nt.s</td>
+      <td>DB_a2t1500r10dRndTun_nt.s</td>
+      <td>DB_a2t1500r10dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t1500r20dRndTun_n0_nt.s</td>
+      <td>DB_a2t1500r20dRndTun_nt.s</td>
+      <td>DB_a2t1500r20dTun_nt.s</td>
+      <td>DB_a2t2000r5dRndTun_n0_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t2000r5dRndTun_nt.s</td>
+      <td>DB_a2t2000r5dTun_nt.s</td>
+      <td>DB_a2t2000r10dRndTun_n0_nt.s</td>
+      <td>DB_a2t2000r10dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t2000r10dTun_nt.s</td>
+      <td>DB_a2t2000r20dRndTun_n0_nt.s</td>
+      <td>DB_a2t2000r20dRndTun_nt.s</td>
+      <td>DB_a2t2000r20dTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t4000r1dRndTun_nt.s</td>
+      <td>DB_a2t4000r5dRndTun_nt.s</td>
+      <td>DB_a2t4000r5dTun_nt.s</td>
+      <td>DB_a2t6000r1dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DB_a2t6000r5dRndTun_nt.s</td>
+      <td>DB_a2t8000r1dRndTun_nt.s</td>
+      <td>DB_a2t8000r5dRndTun_nt.s</td>
+      <td>DBs_a1t10mStrtRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a1t10mStrtTun_nt.s</td>
+      <td>DBs_a1t50mStrtRndTun_nt.s</td>
+      <td>DBs_a1t50mStrtTun_nt.s</td>
+      <td>DBs_a1t100mStrtRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a1t100mStrtTun_nt.s</td>
+      <td>DBs_a1t500r5dRndTun_nt.s</td>
+      <td>DBs_a1t500r5dTun_nt.s</td>
+      <td>DBs_a1t500r10dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a1t500r10dTun_nt.s</td>
+      <td>DBs_a1t1000r5dRndTun_nt.s</td>
+      <td>DBs_a1t1000r5dTun_nt.s</td>
+      <td>DBs_a1t1000r10dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a1t1000r10dTun_nt.s</td>
+      <td>DBs_a1t1500r5dRndTun_nt.s</td>
+      <td>DBs_a1t1500r5dTun_nt.s</td>
+      <td>DBs_a1t1500r10dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a1t1500r10dTun_nt.s</td>
+      <td>DBs_a1t2000r5dRndTun_nt.s</td>
+      <td>DBs_a1t2000r5dTun_nt.s</td>
+      <td>DBs_a2t10mStrtRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t10mStrtTun_nt.s</td>
+      <td>DBs_a2t100mStrtRndTun_nt.s</td>
+      <td>DBs_a2t100mStrtTun_nt.s</td>
+      <td>DBs_a2t250mStrtRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t250mStrtTun_nt.s</td>
+      <td>DBs_a2t250r10dRndTun_nt.s</td>
+      <td>DBs_a2t250r10dTun_nt.s</td>
+      <td>DBs_a2t250r20dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t250r20dTun_nt.s</td>
+      <td>DBs_a2t500mStrtRndTun_nt.s</td>
+      <td>DBs_a2t500mStrtTun_nt.s</td>
+      <td>DBs_a2t500r5dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t500r5dTun_nt.s</td>
+      <td>DBs_a2t500r10dRndTun_nt.s</td>
+      <td>DBs_a2t500r10dTun_nt.s</td>
+      <td>DBs_a2t500r20dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t500r20dTun_nt.s</td>
+      <td>DBs_a2t1000r5dRndTun_nt.s</td>
+      <td>DBs_a2t1000r5dTun_nt.s</td>
+      <td>DBs_a2t1000r10dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t1000r10dTun_nt.s</td>
+      <td>DBs_a2t1000r20dRndTun_nt.s</td>
+      <td>DBs_a2t1000r20dTun_nt.s</td>
+      <td>DBs_a2t1500r5dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t1500r5dTun_nt.s</td>
+      <td>DBs_a2t1500r10dRndTun_nt.s</td>
+      <td>DBs_a2t1500r10dTun_nt.s</td>
+      <td>DBs_a2t1500r20dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t1500r20dTun_nt.s</td>
+      <td>DBs_a2t2000r5dRndTun_nt.s</td>
+      <td>DBs_a2t2000r5dTun_nt.s</td>
+      <td>DBs_a2t2000r10dRndTun_nt.s</td>
+    </tr>
+    <tr>
+      <td>DBs_a2t2000r10dTun_nt.s</td>
+      <td>DBs_a2t2000r20dRndTun_nt.s</td>
+      <td>DBs_a2t2000r20dTun_nt.s</td>
+    </tr>
+  </tbody>
+</table>
+
 ## V4hs1t_RKL
 
 Number of shapes: 140
@@ -3675,67 +3948,113 @@ Number of shapes: 140
 
 ## V4hs2tTunNoTracks
 
-Number of shapes: 40
+Number of shapes: 70
 
 <table>
   <tbody>
     <tr>
+      <td>V4hs2tTunR_1000r01d_nt.s</td>
+      <td>V4hs2tTunR_1000r05d_nt.s</td>
+      <td>V4hs2tTunR_1000r10d_nt.s</td>
+      <td>V4hs2tTunR_1000r20d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunR_1500r01d_nt.s</td>
+      <td>V4hs2tTunR_1500r05d_nt.s</td>
+      <td>V4hs2tTunR_1500r10d_nt.s</td>
+      <td>V4hs2tTunR_1500r20d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunR_2000r01d_nt.s</td>
+      <td>V4hs2tTunR_2000r05d_nt.s</td>
+      <td>V4hs2tTunR_2000r10d_nt.s</td>
+      <td>V4hs2tTunR_2000r20d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunR_3000r00_2d_nt.s</td>
+      <td>V4hs2tTunR_3000r01d_nt.s</td>
+      <td>V4hs2tTunR_3000r05d_nt.s</td>
+      <td>V4hs2tTunR_4000r00_2d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunR_4000r01d_nt.s</td>
+      <td>V4hs2tTunR_4000r05d_nt.s</td>
+      <td>V4hs2tTunR_6000r00_1d_nt.s</td>
+      <td>V4hs2tTunR_6000r00_5d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunR_6000r01d_nt.s</td>
+      <td>V4hs2tTunR_6000r05d_nt.s</td>
+      <td>V4hs2tTunR_8000r00_1d_nt.s</td>
+      <td>V4hs2tTunR_8000r00_5d_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunR_8000r01d_nt.s</td>
+      <td>V4hs2tTunR_8000r02_5d_nt.s</td>
+      <td>V4hs2tTunR_Strt_000_3m_nt.s</td>
+      <td>V4hs2tTunR_Strt_001m_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunR_Strt_005m_nt.s</td>
+      <td>V4hs2tTunR_Strt_010m_nt.s</td>
+      <td>V4hs2tTunR_Strt_020m_nt.s</td>
+      <td>V4hs2tTunR_Strt_050m_nt.s</td>
+    </tr>
+    <tr>
+      <td>V4hs2tTunR_Strt_100m_nt.s</td>
+      <td>V4hs2tTunR_Strt_250m_nt.s</td>
+      <td>V4hs2tTunR_Strt_500m_nt.s</td>
       <td>V4hs2tTunS_1000r01d_nt.s</td>
+    </tr>
+    <tr>
       <td>V4hs2tTunS_1000r05d_nt.s</td>
       <td>V4hs2tTunS_1000r10d_nt.s</td>
       <td>V4hs2tTunS_1000r20d_nt.s</td>
+      <td>V4hs2tTunS_1500r01d_nt.s</td>
     </tr>
     <tr>
-      <td>V4hs2tTunS_1500r01d_nt.s</td>
       <td>V4hs2tTunS_1500r05d_nt.s</td>
       <td>V4hs2tTunS_1500r10d_nt.s</td>
       <td>V4hs2tTunS_1500r20d_nt.s</td>
+      <td>V4hs2tTunS_2000r01d_nt.s</td>
     </tr>
     <tr>
-      <td>V4hs2tTunS_2000r01d_nt.s</td>
       <td>V4hs2tTunS_2000r05d_nt.s</td>
       <td>V4hs2tTunS_2000r10d_nt.s</td>
       <td>V4hs2tTunS_2000r20d_nt.s</td>
+      <td>V4hs2tTunS_3000r00_2d_nt.s</td>
     </tr>
     <tr>
-      <td>V4hs2tTunS_3000r00_2d_g_nt.s</td>
-      <td>V4hs2tTunS_3000r00_2d_nt.s</td>
       <td>V4hs2tTunS_3000r01d_nt.s</td>
       <td>V4hs2tTunS_3000r05d_nt.s</td>
-    </tr>
-    <tr>
-      <td>V4hs2tTunS_4000r00_2d_g_nt.s</td>
       <td>V4hs2tTunS_4000r00_2d_nt.s</td>
       <td>V4hs2tTunS_4000r01d_nt.s</td>
-      <td>V4hs2tTunS_4000r05d_nt.s</td>
     </tr>
     <tr>
-      <td>V4hs2tTunS_6000r00_1d_g_nt.s</td>
+      <td>V4hs2tTunS_4000r05d_nt.s</td>
       <td>V4hs2tTunS_6000r00_1d_nt.s</td>
       <td>V4hs2tTunS_6000r00_5d_nt.s</td>
       <td>V4hs2tTunS_6000r01d_nt.s</td>
     </tr>
     <tr>
       <td>V4hs2tTunS_6000r05d_nt.s</td>
-      <td>V4hs2tTunS_8000r00_1d_g_nt.s</td>
       <td>V4hs2tTunS_8000r00_1d_nt.s</td>
       <td>V4hs2tTunS_8000r00_5d_nt.s</td>
+      <td>V4hs2tTunS_8000r01d_nt.s</td>
     </tr>
     <tr>
-      <td>V4hs2tTunS_8000r01d_nt.s</td>
       <td>V4hs2tTunS_8000r02_5d_nt.s</td>
       <td>V4hs2tTunS_Strt_000_3m_nt.s</td>
       <td>V4hs2tTunS_Strt_001m_nt.s</td>
+      <td>V4hs2tTunS_Strt_005m_nt.s</td>
     </tr>
     <tr>
-      <td>V4hs2tTunS_Strt_005m_nt.s</td>
-      <td>V4hs2tTunS_Strt_010m_g_nt.s</td>
       <td>V4hs2tTunS_Strt_010m_nt.s</td>
       <td>V4hs2tTunS_Strt_020m_nt.s</td>
-    </tr>
-    <tr>
       <td>V4hs2tTunS_Strt_050m_nt.s</td>
       <td>V4hs2tTunS_Strt_100m_nt.s</td>
+    </tr>
+    <tr>
       <td>V4hs2tTunS_Strt_250m_nt.s</td>
       <td>V4hs2tTunS_Strt_500m_nt.s</td>
     </tr>

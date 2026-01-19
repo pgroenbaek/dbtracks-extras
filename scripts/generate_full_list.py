@@ -147,8 +147,15 @@ if __name__ == "__main__":
         num_shapes = count_shapes_in_folder(f"{output_path}/{folder}")
         document.append(f"Number of shapes: {num_shapes}\n\n")
 
-        if os.path.exists(f"./images/{folder}.png"):
-            document.append(f"![{folder}](./images/{folder}.png)\n\n")
+        if os.path.exists(f"./images/{folder}"):
+            images = sorted(
+                (f for f in os.listdir(path)
+                if f.lower().endswith(".png") and os.path.isfile(os.path.join(path, f))),
+                key=natsort
+            )
+            for image in images:
+                document.append(f"![{folder}](./images/{folder}/{image}.png)")
+            document.append(f"\n\n")
         
         html_table = make_shapes_table_from_folder(f"{output_path}/{folder}", columns=4)
         document.append(f"{html_table}\n\n")

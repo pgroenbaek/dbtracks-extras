@@ -42,11 +42,14 @@ def process_trackshape(trackshape: Shape):
     lod_control = trackshape_editor.lod_control(0)
 
     prim_state_names_to_remove = [
-        "mt_trackbase",
+        "mt_trackbed",
+        "mb_trackbed",
+        "mt_tun_rtops",
         "mb_layer1",
         "mt_tun_rside",
-        "mt_tun_rtops",
         "mt_cwire",
+        "mt_tgantry",
+        "mt_trackbase",
     ]
 
     for lod_dlevel in lod_control.distance_levels():
@@ -58,7 +61,7 @@ def process_trackshape(trackshape: Shape):
 
 
 if __name__ == "__main__":
-    print(f"Running ./scripts/V4hs2tTunNoTracks/make_v4hs2ttuns_notracks.py")
+    print(f"Running ./scripts/DBTunNoTracks/make_dbstun_notracks.py")
     
     config = configparser.ConfigParser()
     config.read("scripts/config.ini")
@@ -68,10 +71,10 @@ if __name__ == "__main__":
     output_path = Path(config["shapes"]["output_path"])
 
     load_path = input_path
-    processed_path = output_path / "V4hs2tTunNoTracks"
+    processed_path = output_path / "DBTunNoTracks"
 
-    match_files = ["V4hs2tTunS_*.s"]
-    ignore_files = ["*Pnt*", "*Frog*", "*Xover*", "*Slip*", "*DKW*", "*.sd"]
+    match_files = ["DB1s_*Tun*.s"]
+    ignore_files = ["*Pnt*", "*Frog*", "*Xover*", "*Slip*", "*DKW*", "*.sd", "*_g.s*", "*6m.s*"]
     
     os.makedirs(processed_path, exist_ok=True)
 
@@ -79,6 +82,7 @@ if __name__ == "__main__":
 
     for idx, sfile_name in enumerate(shape_names):
         new_sfile_name = sfile_name.replace(".s", "_nt.s")
+        new_sfile_name = new_sfile_name.replace("DB1s_", "DBs_")
 
         print(f"\tCreating {new_sfile_name} ({idx + 1} of {len(shape_names)})...")
 
