@@ -29,10 +29,10 @@ from shapeedit import ShapeEditor
 
 def process_trackshape(trackshape: Shape):
     """
-    Removes anything other than the tunnel wall and roof from V4hs2tTunS shapes.
+    Removes anything other than the tunnel wall and roof from DB1 Tun and RndTun shapes.
 
     Args:
-        trackshape (Shape): The target V4hs2tTunS track shape to modify.
+        trackshape (Shape): The target DB1 Tun and RndTun track shape to modify.
 
     Returns:
         None
