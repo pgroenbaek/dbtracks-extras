@@ -29,7 +29,7 @@ from shapeedit import ShapeEditor
 
 def process_trackshape(trackshape: Shape):
     """
-    Removes anything other than the tunnel wall and roof from DB1s Tun and RndTun shapes.
+    Removes anything other than the gantry from DB1s Tun and RndTun shapes. Also centers the gantry in Point(0, 0, 0).
 
     Args:
         trackshape (Shape): The target DB1s Tun and RndTun track shape to modify.

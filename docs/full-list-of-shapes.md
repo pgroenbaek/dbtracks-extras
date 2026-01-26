@@ -3,7 +3,7 @@
 
 This is the full list of shapes included in the DBTracks Extras package. None of these exist in Norbert's original packages - they serve as complementary additions to the original shapes.
 
-Total number of shapes: 2595
+Total number of shapes: 2604
 
 <details>
   <summary>
@@ -22,6 +22,7 @@ Total number of shapes: 2595
 - [DB20fb](#db20fb)
 - [DB22b](#db22b)
 - [DB22fb](#db22fb)
+- [DBTunGantry](#dbtungantry)
 - [DBTunNoTracks](#dbtunnotracks)
 - [V4hs1t_RKL](#v4hs1t_rkl)
 - [V4hs2tTunNoTracks](#v4hs2ttunnotracks)
@@ -583,7 +584,7 @@ Number of shapes: 177
 
 ## DB1fbTun
 
-Number of shapes: 216
+Number of shapes: 219
 
 <table>
   <tbody>
@@ -786,127 +787,132 @@ Number of shapes: 216
       <td>DB1fbTun_a1t4000r10d.s</td>
     </tr>
     <tr>
+      <td>DB1fbTun_a1t5800r0_5d.s</td>
+      <td>DB1fbTun_a1t5812r0_5d.s</td>
       <td>DB1fbTun_a1t6000r0_5d.s</td>
       <td>DB1fbTun_a1t6000r1d.s</td>
+    </tr>
+    <tr>
       <td>DB1fbTun_a1t6000r5d.s</td>
       <td>DB1fbTun_a1t8000r0_5d.s</td>
-    </tr>
-    <tr>
       <td>DB1fbTun_a1t8000r1d.s</td>
       <td>DB1fbTun_a1t8000r5d.s</td>
-      <td>DB1fbTun_a1t15000r0_5d.s</td>
-      <td>DB1fbTun_a1t15000r2_5d.s</td>
     </tr>
     <tr>
+      <td>DB1fbTun_a1t14988r0_5d.s</td>
+      <td>DB1fbTun_a1t15000r0_5d.s</td>
+      <td>DB1fbTun_a1t15000r2_5d.s</td>
       <td>DB1fbTun_a2t0_3mStrt.s</td>
+    </tr>
+    <tr>
       <td>DB1fbTun_a2t1_5mstrt.s</td>
       <td>DB1fbTun_a2t1mstrt.s</td>
       <td>DB1fbTun_a2t2_4mStrt.s</td>
+      <td>DB1fbTun_a2t2_5mstrt.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t2_5mstrt.s</td>
       <td>DB1fbTun_a2t2_14mStrt.s</td>
       <td>DB1fbTun_a2t3mStrt.s</td>
       <td>DB1fbTun_a2t5mstrt.s</td>
+      <td>DB1fbTun_a2t6mStrt.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t6mStrt.s</td>
       <td>DB1fbTun_a2t10mStrt.s</td>
       <td>DB1fbTun_a2t15mStrt.s</td>
       <td>DB1fbTun_a2t20mstrt.s</td>
+      <td>DB1fbTun_a2t24_01mStrt.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t24_01mStrt.s</td>
       <td>DB1fbTun_a2t25_8mStrt.s</td>
       <td>DB1fbTun_a2t25mStrt.s</td>
       <td>DB1fbTun_a2t27_4mStrt.s</td>
+      <td>DB1fbTun_a2t28_3mStrt.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t28_3mStrt.s</td>
       <td>DB1fbTun_a2t28_7mStrt.s</td>
       <td>DB1fbTun_a2t30mStrt.s</td>
       <td>DB1fbTun_a2t35mStrt.s</td>
+      <td>DB1fbTun_a2t37_86mStrt.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t37_86mStrt.s</td>
       <td>DB1fbTun_a2t40mStrt.s</td>
       <td>DB1fbTun_a2t44_46mStrt.s</td>
       <td>DB1fbTun_a2t45mStrt.s</td>
+      <td>DB1fbTun_a2t50mStrt.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t50mStrt.s</td>
       <td>DB1fbTun_a2t75mStrt.s</td>
       <td>DB1fbTun_a2t90mStrt.s</td>
       <td>DB1fbTun_a2t100mStrt.s</td>
+      <td>DB1fbTun_a2t250mStrt.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t250mStrt.s</td>
       <td>DB1fbTun_a2t250r1d.s</td>
       <td>DB1fbTun_a2t250r5d.s</td>
       <td>DB1fbTun_a2t250r10d.s</td>
+      <td>DB1fbTun_a2t250r20d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t250r20d.s</td>
       <td>DB1fbTun_a2t300r1d.s</td>
       <td>DB1fbTun_a2t300r5d.s</td>
       <td>DB1fbTun_a2t300r10d.s</td>
+      <td>DB1fbTun_a2t300r20d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t300r20d.s</td>
       <td>DB1fbTun_a2t375r1d.s</td>
       <td>DB1fbTun_a2t375r5d.s</td>
       <td>DB1fbTun_a2t375r10d.s</td>
+      <td>DB1fbTun_a2t375r20d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t375r20d.s</td>
       <td>DB1fbTun_a2t500mStrt.s</td>
       <td>DB1fbTun_a2t500r1d.s</td>
       <td>DB1fbTun_a2t500r5d.s</td>
+      <td>DB1fbTun_a2t500r10d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t500r10d.s</td>
       <td>DB1fbTun_a2t500r20d.s</td>
       <td>DB1fbTun_a2t750r1d.s</td>
       <td>DB1fbTun_a2t750r5d.s</td>
+      <td>DB1fbTun_a2t750r10d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t750r10d.s</td>
       <td>DB1fbTun_a2t750r20d.s</td>
       <td>DB1fbTun_a2t1000r1d.s</td>
       <td>DB1fbTun_a2t1000r5d.s</td>
+      <td>DB1fbTun_a2t1000r10d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t1000r10d.s</td>
       <td>DB1fbTun_a2t1000r20d.s</td>
       <td>DB1fbTun_a2t1500r1d.s</td>
       <td>DB1fbTun_a2t1500r5d.s</td>
+      <td>DB1fbTun_a2t1500r10d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t1500r10d.s</td>
       <td>DB1fbTun_a2t1500r20d.s</td>
       <td>DB1fbTun_a2t2000r1d.s</td>
       <td>DB1fbTun_a2t2000r5d.s</td>
+      <td>DB1fbTun_a2t2000r10d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t2000r10d.s</td>
       <td>DB1fbTun_a2t2000r20d.s</td>
       <td>DB1fbTun_a2t3000r1d.s</td>
       <td>DB1fbTun_a2t3000r5d.s</td>
+      <td>DB1fbTun_a2t3000r10d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t3000r10d.s</td>
       <td>DB1fbTun_a2t4000r1d.s</td>
       <td>DB1fbTun_a2t4000r5d.s</td>
       <td>DB1fbTun_a2t4000r10d.s</td>
+      <td>DB1fbTun_a2t6000r0_5d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t6000r0_5d.s</td>
       <td>DB1fbTun_a2t6000r1d.s</td>
       <td>DB1fbTun_a2t6000r5d.s</td>
       <td>DB1fbTun_a2t8000r0_5d.s</td>
+      <td>DB1fbTun_a2t8000r1d.s</td>
     </tr>
     <tr>
-      <td>DB1fbTun_a2t8000r1d.s</td>
       <td>DB1fbTun_a2t8000r5d.s</td>
       <td>DB1fbTun_a2t15000r0_5d.s</td>
       <td>DB1fbTun_a2t15000r2_5d.s</td>
@@ -3455,9 +3461,22 @@ Number of shapes: 177
   </tbody>
 </table>
 
+## DBTunGantry
+
+Number of shapes: 2
+
+<table>
+  <tbody>
+    <tr>
+      <td>DBs_RndTunGantry.s</td>
+      <td>DBs_TunGantry.s</td>
+    </tr>
+  </tbody>
+</table>
+
 ## DBTunNoTracks
 
-Number of shapes: 175
+Number of shapes: 179
 
 <table>
   <tbody>
@@ -3639,37 +3658,43 @@ Number of shapes: 175
       <td>DB_a2t6000r5dRndTun_nt.s</td>
       <td>DB_a2t8000r1dRndTun_nt.s</td>
       <td>DB_a2t8000r5dRndTun_nt.s</td>
-      <td>DBs_a1t10mStrtRndTun_nt.s</td>
+      <td>DBs_a1t10mStrtRndTun_l_nt.s</td>
     </tr>
     <tr>
+      <td>DBs_a1t10mStrtRndTun_nt.s</td>
+      <td>DBs_a1t10mStrtTun_l_nt.s</td>
       <td>DBs_a1t10mStrtTun_nt.s</td>
       <td>DBs_a1t50mStrtRndTun_nt.s</td>
+    </tr>
+    <tr>
       <td>DBs_a1t50mStrtTun_nt.s</td>
       <td>DBs_a1t100mStrtRndTun_nt.s</td>
-    </tr>
-    <tr>
       <td>DBs_a1t100mStrtTun_nt.s</td>
       <td>DBs_a1t500r5dRndTun_nt.s</td>
+    </tr>
+    <tr>
       <td>DBs_a1t500r5dTun_nt.s</td>
       <td>DBs_a1t500r10dRndTun_nt.s</td>
-    </tr>
-    <tr>
       <td>DBs_a1t500r10dTun_nt.s</td>
       <td>DBs_a1t1000r5dRndTun_nt.s</td>
+    </tr>
+    <tr>
       <td>DBs_a1t1000r5dTun_nt.s</td>
       <td>DBs_a1t1000r10dRndTun_nt.s</td>
-    </tr>
-    <tr>
       <td>DBs_a1t1000r10dTun_nt.s</td>
       <td>DBs_a1t1500r5dRndTun_nt.s</td>
-      <td>DBs_a1t1500r5dTun_nt.s</td>
-      <td>DBs_a1t1500r10dRndTun_nt.s</td>
     </tr>
     <tr>
+      <td>DBs_a1t1500r5dTun_nt.s</td>
+      <td>DBs_a1t1500r10dRndTun_nt.s</td>
       <td>DBs_a1t1500r10dTun_nt.s</td>
       <td>DBs_a1t2000r5dRndTun_nt.s</td>
+    </tr>
+    <tr>
       <td>DBs_a1t2000r5dTun_nt.s</td>
+      <td>DBs_a2t10mStrtRndTun_l_nt.s</td>
       <td>DBs_a2t10mStrtRndTun_nt.s</td>
+      <td>DBs_a2t10mStrtTun_l_nt.s</td>
     </tr>
     <tr>
       <td>DBs_a2t10mStrtTun_nt.s</td>

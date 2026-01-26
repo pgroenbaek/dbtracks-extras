@@ -46,7 +46,6 @@ def process_trackshape(trackshape: Shape):
 
     lod_control = trackshape_editor.lod_control(0)
 
-
     prim_state_names_to_remove = [
         "mt_trackbed",
         "mb_trackbed",
